@@ -1,5 +1,5 @@
 from poloczenie import connection
-from db_query import get_users
+from db_query import get_users, add_user
 INTERFACE = """
 1 - wypisz uzytkowników
 2 - dodaj użytkownika
@@ -14,7 +14,8 @@ while True:
         for item in result:
             print(item)
     elif opcja == '2':
-        print('tutaj dodam uzytkownikow')
+        username = input("podaj nazwe użytkownika\n")
+        add_user(username, conn)
     elif opcja == '3':
         print("do widzenia")
         break
