@@ -7,5 +7,5 @@ def get_users(connection):
 
 def add_user(username, connection):
     cursor = connection.cursor()
-    query = f"INSERT INTO \"user\" (username) values ('{username}');"
+    query = f"""INSERT INTO "user" (username) values ('{username}');"""
     cursor.execute(query)
